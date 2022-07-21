@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+
+header {
+  background-image: url("../../res/desert.jpg");
+  object-fit: contain;
+  background-size: cover;
+  font-family: 'Antic Slab', serif;
+  letter-spacing: 3px;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(28, 38, 61, 0.5);
+
+  h1 {
+    text-transform: uppercase;
+    font-size: var(--scale3);
+    padding-left: 15px;
+  }
+}
+
+.logo img {
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 100%;
+  
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "media "
+    "."
+    ".";
+    grid-area: head;
+  }
+
+  .media {
+    grid-area: media;
+    align-self: end;
+    padding: 0 var(--standard-padding-size);
+  }
+}

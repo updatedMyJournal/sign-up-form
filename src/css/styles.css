@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
 :root {
   --doc-font-size: 16px;
   --standard-padding-size: 30px;
@@ -63,5 +64,45 @@ body {
   .text-section {
     grid-area: text;
     padding: var(--standard-padding-size);
+  }
+}
+header {
+  background-image: url("../../res/desert.jpg");
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: cover;
+  font-family: "Antic Slab", serif;
+  letter-spacing: 3px;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(28, 38, 61, 0.5);
+}
+.media h1 {
+  text-transform: uppercase;
+  font-size: var(--scale3);
+  padding-left: 15px;
+}
+
+.logo img {
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100%;
+    grid-template-areas: "media " "." ".";
+    grid-area: head;
+  }
+  .media {
+    grid-area: media;
+    align-self: end;
+    padding: 0 var(--standard-padding-size);
   }
 }/*# sourceMappingURL=styles.css.map */
