@@ -47,6 +47,15 @@ body {
   }
 }
 
+.error input[type="password"] {
+  border: 2px solid red;
+}
+
+.error:not(:last-child)::after {
+  content: "* Passwords do not match";
+  color: red;
+}
+
 @media screen and (min-width: 768px) {
   .page-wrapper {
     display: grid;

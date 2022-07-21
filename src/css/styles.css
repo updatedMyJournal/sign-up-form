@@ -47,6 +47,15 @@ body {
   font-size: var(--scale1);
 }
 
+.error input[type=password] {
+  border: 2px solid red;
+}
+
+.error:not(:last-child)::after {
+  content: "* Passwords do not match";
+  color: red;
+}
+
 @media screen and (min-width: 768px) {
   .page-wrapper {
     display: grid;
@@ -130,7 +139,7 @@ form {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 5px;
   padding-bottom: var(--standard-padding-size);
   box-shadow: 5px 0px 5px 2px var(--text-color);
 }
@@ -150,6 +159,7 @@ label {
 .input-wrapper {
   display: flex;
   flex-flow: column nowrap;
+  height: 65px;
 }
 
 .submit-section {
@@ -180,7 +190,7 @@ label {
     grid-template-rows: repeat(4, 50px);
     grid-template-columns: 250px 250px;
     grid-template-areas: "fh fh" "fn ln" "em pn" "ps psc";
-    gap: 15px 50px;
+    gap: 10px 50px;
     align-content: center;
     justify-content: start;
     grid-area: form;
