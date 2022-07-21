@@ -1,0 +1,107 @@
+$p: var(--standard-padding-size);
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding-bottom: var(--standard-padding-size);
+  box-shadow: 5px 0px 5px 2px var(--text-color);
+
+  input {
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+
+  input:focus {
+    outline-color: var(--text-color);
+  }
+}
+
+label {
+  text-transform: uppercase;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.submit-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: $p 0 calc($p * 2) 0;
+
+  input[type="submit"] {
+    background-color: var(--text-color);
+    color: black;
+    font-size: var(--scale1);
+    padding: 15px 50px;
+    border-radius: 10px;
+  }
+
+  input[type="submit"]:hover {
+    border: 2px solid var(--text-color);
+    box-shadow: 0px 0px 3px 3px white;
+    cursor: pointer;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    display: grid;
+    grid-template-rows: repeat(4, 50px);
+    grid-template-columns: 250px 250px;
+    grid-template-areas: 
+    "fh fh"
+    "fn ln"
+    "em pn"
+    "ps psc";
+    gap: 15px 50px;
+    align-content: center;
+    justify-content: start;
+    grid-area: form;
+    padding-right: $p;
+  }
+
+  .submit-section {
+    display: block;
+    grid-area: sub;
+    padding: $p $p calc($p * 2);
+  }
+
+  form h2 {
+    grid-area: fh;
+  }
+  
+  input[type="text"] {
+    grid-area: fn; 
+  }
+  
+  input[type="text"]:last-child {
+    grid-area: ln;
+  }
+  
+  input[type="email"] {
+    grid-area: em;
+  }
+  
+  input[type="tel"] {
+    grid-area: pn;
+  }
+  
+  input[type="password"] {
+    grid-area: ps;
+  }
+  
+  input[type="password"]:last-child {
+    grid-area: psc;
+  }
+}
