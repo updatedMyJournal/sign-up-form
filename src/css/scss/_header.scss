@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
 header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
   background-image: url("../../res/desert.jpg");
   object-fit: contain;
   background-size: cover;
   font-family: 'Antic Slab', serif;
   letter-spacing: 3px;
+  height: 50vh;
 }
 
 .media {
@@ -25,6 +30,16 @@ header {
   height: 100px;
 }
 
+.image-author {
+  padding: 0 calc(var(--standard-padding-size) / 2);
+  text-align: center;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
 @media screen and (min-width: 768px) {
   header {
     height: 100%;
@@ -35,13 +50,17 @@ header {
     grid-template-areas: 
     "media "
     "."
-    ".";
+    "author";
     grid-area: head;
+    align-items: end;
   }
 
   .media {
     grid-area: media;
-    align-self: end;
     padding: 0 var(--standard-padding-size);
+  }
+
+  .image-author {
+    grid-area: author;
   }
 }
