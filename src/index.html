@@ -4,9 +4,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Document</title>
 </head>
 <body>
-  
+
+  <div class="page-wrapper">
+
+    <header>
+      <div class="media">
+        <div class="logo">
+          <img src="../res/doge.png" alt="doge">
+        </div>
+        <h1>doge</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="text-section">
+        <h2>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Libero voluptate non magnam placeat temporibus ab tempore quia
+          sed fuga fugiat enim officia saepe minima, pariatur dolores tenetur ex omnis animi!
+          Quibusdam laborum ullam odit. Saepe, minus! Aliquid saepe iusto
+          tempora id laboriosam. Placeat, illo.
+        </h2>
+        <h2>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Architecto, voluptates beatae, nobis at atque, id possimus numquam in
+          odio quibusdam eius quod perspiciatis!
+        </h2>
+      </section>
+
+      <form action="" method="post" id="myform">
+        <h2>Fill in the form</h2>
+        <div class="input-wrapper">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="phone-number">Phone number</label>
+          <input type="tel" id="phone-number" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="password-check">Confirm password</label>
+          <input type="password" id="password-check" required>
+        </div>
+      </form>
+
+      <section class="submit-section">
+        <input type="submit" value="Create account" form="myform">
+        <p>Already have an account? <a href="">Log in</a></p>
+      </section>
+    </main>
+
+  </div>
+
 </body>
 </html>
